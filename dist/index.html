@@ -11,7 +11,7 @@
 
 <body>
 
-    <div class="getTeamName">
+    <div class="getRecipeName">
         <input placeholder="Your Ingrediant Name :" />
         <button onclick=getData()>Search!</button>
     </div>
@@ -22,17 +22,20 @@
 
     <script id="recipes-template" type="text/x-handlebars-template">
     {{#each recipes}}
-        <div class="ShowRecipe">
+        <div class="OneRecipe">
             <p id="title">{{title}}</p>
+            <img class="imageclick" id="recipe-picture" src={{thumbnail}}>
+            <h5>Recipe youtube Link:</h5>
             <a href='{{href}}'>{{href}}</a>
-            <p>{{title}}</p>
-            <img class="imageclick" src=${`thumbnail`}>
-            <p>
-<!--                 <ul>
-                    {{#each Ingrediant}}
-                    <li>{{this}}</li>
+            <p >
+                <h5>The ingredients are:</h5>
+                <ul class="ingredients">
+                    {{#each ingredients}}
+                      <li>
+                          {{this}}
+                      </li>
                     {{/each}}
-                </ul> -->
+                </ul>
             </p>
         </div>
     {{/each}}

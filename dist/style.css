@@ -5,15 +5,28 @@
     margin-top: 10px;
     display: grid;
 }
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
 body {
     margin: 0px;
     background-color: rgb(222, 238, 221);
 }
 
-#title{background-color: lightgreen;border: 2px;border-color: black;}
+#title {
+    background-color: lightgreen;
+    border: 2px;
+    border-color: black;
+}
 
-.ShowRecipe
-{background-color: bisque;
+#recipe-picture {
+    width: 150px;
+    height: 150px;
+}
+
+.OneRecipe {
+    background-color: bisque;
     font-family: "Lucida Handwriting", "Brush Script MT", Cursive;
 }

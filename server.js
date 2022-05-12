@@ -26,16 +26,18 @@ app.get('/sanity', function (request, response) {
 
 app.get("/recipes/:ingredient", function (request, response) {
     const yourIngredient = request.params.ingredient
-   // let recipesData = []
+    // let recipesData = []
     console.log(yourIngredient)
     let apiURL = `https://recipes-goodness.herokuapp.com/recipes/${yourIngredient}`
     urllib.request(apiURL, function (err, data, res) {
         if (err) { throw err; }
         loadRecipes(JSON.parse(data).results)
-        /* console.log(Recipes) */
+        /*Just to check data:
+         console.log(Recipes)
+         console.log(Recipes[0]) */
         response.send(Recipes)
 
-     })
+    })
 })
 
 
